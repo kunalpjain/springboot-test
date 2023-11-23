@@ -21,8 +21,13 @@ public class Student {
     @OneToOne(cascade = CascadeType.ALL)
     private Course course;
 
-    public Student(String name, Course addedCourse) {
+    @ManyToOne
+    @JoinColumn(name = "university_id")
+    private University university;
+
+    public Student(String name, Course addedCourse, University university) {
         this.name = name;
         this.course = addedCourse;
+        this.university = university;
     }
 }

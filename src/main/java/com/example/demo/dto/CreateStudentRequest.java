@@ -6,4 +6,5 @@ import lombok.Data;
 public class CreateStudentRequest {
     private String name;
     private String courseName;
+    private String universityName;
 }
